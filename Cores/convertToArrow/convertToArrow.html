@@ -43,6 +43,13 @@
         setBackgroundColorById = (id, color) => document.getElementById(id).style = "background-color: " + color
         
         mouseOverFunction = el => el.style = "background-color: black";
+
+        document.getElementById("paragraph").addEventListener("click", () => {
+            const color = getValueFromId("color-input");
+            setBackgroundColorById("paragraph", color);
+        });
+
+
         
     </script>
 </body>
