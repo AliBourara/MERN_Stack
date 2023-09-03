@@ -1,0 +1,6 @@
+.header {
+    background-color: #6aa84f;
+    height: 80px;
+    margin-bottom: 20px;
+    grid-column: 1 / 3;
+}

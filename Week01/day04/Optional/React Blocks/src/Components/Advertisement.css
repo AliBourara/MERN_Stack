@@ -1,0 +1,5 @@
+.advertisement {
+    background-color: #b4a7d6;
+    min-height: 150px;
+    grid-column: 1/-1;
+}
