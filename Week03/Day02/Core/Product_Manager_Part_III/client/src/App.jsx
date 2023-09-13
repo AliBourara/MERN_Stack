@@ -1,26 +1,21 @@
-import { useState } from 'react'
 import './App.css'
-import { Routes,Route } from 'react-router-dom'
-import AddProduct from './components/AddProduct'
-import AllProduct from './components/AllProduct'
+import { Routes, Route } from 'react-router-dom'
 import OneProduct from './components/OneProduct';
+import Home from './views/home';
 
 function App() {
 
   return (
     <>
-        <Routes>
+      <Routes>
         <Route path='/' element={
-          <>
-          <AddProduct/>
-          <AllProduct/>
-          </>
+          <Home />
         } />
         <Route path='/:id' element={
           <>
-          <OneProduct/>
+            <OneProduct />
           </>
-        }/>
+        } />
       </Routes>
     </>
   )

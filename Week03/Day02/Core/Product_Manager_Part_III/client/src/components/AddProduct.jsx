@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 
-const AddProduct = (props) => {
+const AddProduct = ({handleAddProduct}) => {
     const [product, setProduct] = useState({title :"",price : 0 , description :""})
     const formHandler = (e) => {
         e.preventDefault()
@@ -10,6 +10,7 @@ const AddProduct = (props) => {
         .then(serverResponse => {
             console.log(serverResponse)
             console.log(">>>>>>Product Submited<<<<<<", product)
+            handleAddProduct({...product,_id:serverResponse.data._id})
         })
         .catch(serverError => console.log(serverError))
         setProduct({title :"",price : 0 , description :""})
